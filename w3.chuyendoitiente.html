@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d {
+            display: flex;   
+        } 
+        #d1,#d2,#d3,#d4{
+            width: 20%;;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+<div id="d">
+    <div id="d1">
+        <label for="Amount">Amount</label><br><br>
+        <input id="number" type="number">
+    </div>
+    <div id="d2">
+        <label for="from">From curency</label><br><br>
+        <select name="from" id="from">
+            <option value="1">VND</option>
+            <option value="23500">USD</option>
+        </select>
+    </div>
+    <div id="d3">
+        <label for="to">To Curency</label><br><br>
+        <select name="to" id="to">
+            <option value="1">VND</option>
+            <option value="23500">USD</option>
+        </select>
+    </div>
+    <div id="d4">
+        <button onclick="cal()">Convert</button>
+    </div>
+</div>
+<div>
+    <h1 id="result">
+    </h1>
+</div>
+<script>
+    function cal (){
+       let a= +document.getElementById("number").value;
+       let b= +document.getElementById("from").value;
+       let c= +document.getElementById("to").value;
+       document.getElementById("result").innerHTML="Result:   "+ (a*b/c);
+    }
+</script>
+</body>
+</html>
