@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div>
+        <label for="cannang">Cân Nặng</label><br>
+        <input id="kg" type="number">
+    </div>
+    <div>
+        <label for="chieucao">Cân Nặng(m)</label><br>
+        <input id="m" type="number">
+    </div>
+    <div>
+        <button onclick="kq()">Chuyển Đổi</button>
+    </div>    
+    <div id="result">
+    </div>
+</div>
+    <script>
+        function kq(){
+            let a = + document.getElementById("kg").value;
+            let b = + document.getElementById("m").value;
+            let c = a/(b*b)
+            if(
+                c<16
+            ){document.getElementById("result").innerHTML="Gầy độ 3"
+        }if(
+                c>=16&&c<17
+            ){document.getElementById("result").innerHTML="Gầy độ 2"
+        }
+        if(
+                c>=17&&c<18.5
+            ){document.getElementById("result").innerHTML="Gầy độ 1"
+        }if(
+                c>=18.5&&c<25
+            ){document.getElementById("result").innerHTML="Bình thường"
+        }if(
+                c>=25&&c<30
+            ){document.getElementById("result").innerHTML="Thừa Cân"
+        }if(
+                c>=30&&c<35
+            ){document.getElementById("result").innerHTML="Béo phì độ 1"
+        }if(
+                c>=35&&c<40
+            ){document.getElementById("result").innerHTML="Béo Phì độ 2"
+        }if(
+                c>=40
+            ){document.getElementById("result").innerHTML="Béo Phì độ 3"
+        }
+    }
+    </script>
+</body>
+</html>
