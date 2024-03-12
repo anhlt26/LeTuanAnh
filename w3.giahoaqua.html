@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            Giá hoa Quả
+        </div>
+        <div>
+            <input id="hq" type="text">
+            <button onclick="kq()">Xem gia</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        function kq(){
+            let m =["oi","dua hau","tao","xoai","cam","chom chom","mang cut"]
+            let n =[20000,20000,30000,30000,40000,40000,50000]
+            for(let i=0;i<m.length;i++){
+                if(m[i]==document.getElementById("hq").value){
+                    document.getElementById("result").innerHTML=n[i]}
+                }
+            }
+    </script>
+</body>
+</html>
